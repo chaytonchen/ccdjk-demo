@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'users/new'
 
   root 'static_pages#home'
+  get 'index' to "static_pages#home"
   resources :users do
     member do
       get :following, :followers
